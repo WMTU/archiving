@@ -4,7 +4,7 @@ archiving
 About
 ----
 
-[WMTU Archives] (https://archive.wmtu.fm "WMTU Archives")
+[WMTU Archives](https://archive.wmtu.fm "WMTU Archives")
 
 WMTU creates weekly archives for all of our DJ shows, based on specified time blocks.
 This is a faily basic BASH script that runs as a cron job:
