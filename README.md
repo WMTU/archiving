@@ -1,16 +1,26 @@
 archiving
-=========
+====
 
-Weekly Broadcast Archiver
+About
+----
 
-You will need to have avconv from libav installed in order to dump the mp3 stream to a file
+[WMTU Archives] (https://archive.wmtu.fm "WMTU Archives")
 
-===
-#### archiving.php
+WMTU creates weekly archives for all of our DJ shows, based on specified time blocks.
+This is a faily basic BASH script that runs as a cron job:
+```bash
+# archiving script, runs every hour
+55 * * * * screen -S archive -dma bash /opt/archiving/archiving.sh
+```
 
-This is a script that is run via cron job as often as needed for the time granularity in the times file.
+Dependencies
+----
 
-===
-#### times
+* ffmpeg/avconv
+* BASH (or a shell of your choice)
 
-This is just a text file which contains the start time and duration for archiving blocks
+archiving.sh
+----
+
+This script has been converted from the previous PHP version, with various improvements and reliability fixes.
+It creates MP3 files with easy to read filenames for DJs or community members to download.
